@@ -1,20 +1,31 @@
-/////////////////////////////////////////////////
-//  Displey numbar;
-//1,2,3,4......n
-//Using loop ex for loop 
-// out of main class that is use class/methoed/fun
-///////////////////////////////////////////////
+// Write a program which checks whether number is divisible by 3 and 5
+
 #include<stdio.h>
-void Displey()
+#include<stdbool.h>
+bool Check(int ino)
 {
     
-    for(int icnt =1;icnt<7;icnt++)
+    if(((ino%3)==0)&&((ino%5)==0))
     {
-        printf("%d\n",icnt);
+        return true;
+    }else{
+        return false;
     }
 }
 int main()
 {
-    Displey();
+
+    bool iret=true;
+    int no=0;
+    printf("Enter the Numbar that want you check:");
+    scanf("%d",&no);
+    iret=Check(no);
+    if(iret==true)
+    {
+        printf("the number is divisibal by 3 and 5");
+    }else if(iret==false)
+    {
+        printf("the numbaris not Divisibal 3 and 5:");
+    }
     return 0;
 }
